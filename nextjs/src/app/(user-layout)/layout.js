@@ -11,7 +11,7 @@ export const metadata = {
 export default function UserLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col h-screen justify-between bottom-0">
         {children}
         <Footer/>
       </body>
