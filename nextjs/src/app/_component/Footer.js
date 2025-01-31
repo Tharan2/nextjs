@@ -1,3 +1,3 @@
 export default function Footer(){
-  return <h1 className=" text-yellow-200 p-3 bg-black">Footer</h1>
+  return <div className="flex bg-[#2a484c] justify-center"><h1 className=" p-3  text-2xl font-bold ">Footer</h1></div>
 }

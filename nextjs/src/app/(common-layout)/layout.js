@@ -12,9 +12,11 @@ export default function CommonLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <div className="flex flex-col h-screen justify-between">
         <Header/>
         {children}
         <Footer/>
+        </div>
       </body>
     </html>
   );
