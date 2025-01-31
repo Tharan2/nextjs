@@ -1,6 +1,6 @@
-import Header from "./component/Header";
-import Footer from "./component/Footer";
-import "./globals.css";
+import Header from "../_component/Header";
+import Footer from "../_component/Footer";
+import "../globals.css";
 
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
   description: "Learning Nextjs",
 };
 
-export default function RootLayout({ children }) {
+export default function CommonLayout({ children }) {
   return (
     <html lang="en">
       <body>
