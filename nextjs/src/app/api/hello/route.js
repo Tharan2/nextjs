@@ -1,12 +1,20 @@
+import { headers } from "next/headers";
 
-export function GET(){
-  const data = [
-    {id:1,name:"hello",},
-    {id:2,name:"hai"},
-    {id:3,name:"world"}
-  ]
-  return new Response(JSON.stringify({data:data},{status:200}))
+
+export const dynamic = "force-static";
+export function GET() {
+  const data = new Date().toISOString();
+
+  return new Response(
+    JSON.stringify({ data }),
+    {
+      status: 200,
+      
+    }
+  );
 }
+
+
 
 export async function POST(req){
   let data = [

@@ -6,7 +6,7 @@ export function middleware(request){
     console.log("redirecting to login")
     return NextResponse.redirect(new URL('/login', request.url));
   }
-  if(request.nextUrl.pathname.startsWith('/api/hello')){
+  if(request.nextUrl.pathname.startsWith('/api/hai')){
     if(true){
       return NextResponse.json({message:"api is protected"})
   }
