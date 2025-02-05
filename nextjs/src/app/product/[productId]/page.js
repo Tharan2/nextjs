@@ -7,5 +7,5 @@ export default async function ProductDetails({ params }) {
   if(productId>100)
     return notFound();
   
-  return <h1>Product ID: {productId}</h1>;
+  return <div className="flex flex-col text-2xl font-bold items-center"><h1>Dynamic page</h1><h1>Product ID: {productId}</h1></div>;
 }

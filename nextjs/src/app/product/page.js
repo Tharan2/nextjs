@@ -4,7 +4,7 @@ export const metadata = {
   description:"this is Product page"
 }
 export default function product(){
-  return (<div className=" p-5 text-2xl font-serif">
+  return (<div className="flex flex-col p-5 text-2xl font-serif">
     <h1 className="font-bold text-3xl">Products</h1>
     <div className="flex p-3">
     <h3>Product 1</h3>

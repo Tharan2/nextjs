@@ -3,7 +3,11 @@ import { headers } from "next/headers";
 
 export const dynamic = "force-static";
 export function GET() {
-  const data = new Date().toISOString();
+  let data = [
+    {id:1,name:"hello",},
+    {id:2,name:"hai"},
+    {id:3,name:"world"}
+  ]
 
   return new Response(
     JSON.stringify({ data }),
@@ -25,7 +29,7 @@ export async function POST(req){
   const body = await req.json();
   console.log(body)
   data = [...data,body]
-  return new Response(JSON.stringify({data:data}),{status:200})
+  return new Response(JSON.stringify({data}),{status:200})
 }
 
 export async function PUT(req){
@@ -38,7 +42,7 @@ export async function PUT(req){
   const id =body.id;
   const index = data.findIndex((obj)=>obj.id==id)
   data[index]=body
-  return new Response(JSON.stringify({message:data}),{status:200})
+  return new Response(JSON.stringify({data}),{status:200})
 }
 
 export async function DELETE(req){
@@ -51,5 +55,5 @@ export async function DELETE(req){
   body = body.id
   const index = data.findIndex((obj)=>obj.id==body)
   data.splice(index,1)
-  return new Response(JSON.stringify({message:data}),{status:200})
+  return new Response(JSON.stringify({data}),{status:200})
 }

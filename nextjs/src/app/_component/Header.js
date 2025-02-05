@@ -1,13 +1,34 @@
 import Link from "next/link"
 export default function Header(){
-  return <div className=" flex bg-blue-300 justify-between items-center"> 
-  <h1 className="  p-3  text-2xl flex-auto font-bold text-center">Header</h1>
-    <div className="flex ">
-    <Link className="text-blue-700 p-2 contain-style" href="/about" prefetch={false}>About</Link >
-    <Link className="text-blue-700 p-2 contain-style" href="/product">Products</Link >
-    <Link className="text-blue-700 p-2 contain-style" href="/login">Login</Link >
-    <Link className="text-blue-700 p-2 contain-style" href="/signup">Signup</Link >
+  return (
+    <div className="relative flex bg-blue-300 justify-between p-3 items-center">
+      {/* Header */}
+      <h1 className="absolute left-1/2  -translate-x-1/2 p-3 text-2xl font-bold text-center">
+        Header
+      </h1>
+  
+      {/* Navigation Links */}
+      <div className="flex ml-auto">
+        <Link className="text-blue-700 p-2 contain-style" href="/">
+          Home
+        </Link>
+        <Link className="text-blue-700 p-2 contain-style" href="/about" prefetch={false}>
+          About
+        </Link>
+        <Link className="text-blue-700 p-2 contain-style" href="/api_page">
+          Api
+        </Link>
+        <Link className="text-blue-700 p-2 contain-style" href="/product">
+          Products
+        </Link>
+        <Link className="text-blue-700 p-2 contain-style" href="/login">
+          Login
+        </Link>
+        <Link className="text-blue-700 p-2 contain-style" href="/signup">
+          Signup
+        </Link>
+      </div>
     </div>
-  </div>
-} 
-
+  );
+  
+}

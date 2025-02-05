@@ -4,7 +4,7 @@ export function middleware(request){
 
   if(request.nextUrl.pathname.startsWith('/product')){
     console.log("redirecting to login")
-    return NextResponse.redirect(new URL('/login', request.url));
+    //return NextResponse.redirect(new URL('/login', request.url));
   }
   if(request.nextUrl.pathname.startsWith('/api/hai')){
     if(true){
