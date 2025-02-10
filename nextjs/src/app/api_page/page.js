@@ -1,6 +1,7 @@
-'use client'
-import { useState } from "react";
 
+'use client'
+
+import { useState } from "react";
 export default function ApiPage() {
   const [response, setResponse] = useState(null);
   const [id, setId] = useState('');

@@ -1,7 +1,7 @@
 import { headers } from "next/headers";
 
 
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
 export function GET() {
   let data = [
     {id:1,name:"hello",},

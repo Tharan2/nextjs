@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 
 const Dynamicdata = dynamic(()=>import('./Story'),
-  {loading:()=>{<h1>Loading</h1>}
+  {loading:()=><h1 className='text-3xl '>Loading.......</h1>
 });
 
 const TomStory = () => {

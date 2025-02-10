@@ -1,5 +1,9 @@
+'use client'
 import Link from "next/link"
+import { usePathname } from "next/navigation";
 export default function Header(){
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <div className="relative flex bg-blue-300 justify-between p-3 items-center">
       {/* Header */}
@@ -9,7 +13,7 @@ export default function Header(){
   
       {/* Navigation Links */}
       <div className="flex ml-auto">
-        <Link className="text-blue-700 p-2 contain-style" href="/">
+        <Link className="text-blue-700 p-2 contain-style " href="/">
           Home
         </Link>
         <Link className="text-blue-700 p-2 contain-style" href="/about" prefetch={false}>
