@@ -9,7 +9,7 @@ export default function ApiPage() {
 
   const getrequest = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/hello', {
+      const response = await fetch('/api/hello', {
         method: 'GET',
 
       });
@@ -22,7 +22,7 @@ export default function ApiPage() {
   };
   const postrequest = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/hello', {
+      const response = await fetch('/api/hello', {
         method: 'post',body:JSON.stringify({id:id,name:name})});
       const data = await response.json();
       setResponse(data.data);
@@ -33,7 +33,7 @@ export default function ApiPage() {
   };
   const putrequest = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/hello', {
+      const response = await fetch('/api/hello', {
         method: 'put',body:JSON.stringify({id:id,name:name})});
       const data = await response.json();
       setResponse(data.data);
@@ -44,7 +44,7 @@ export default function ApiPage() {
   };
   const deleterequest = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/hello', {
+      const response = await fetch('/api/hello', {
         method: 'delete',body:JSON.stringify({id})});
       const data = await response.json();
       setResponse(data.data);
